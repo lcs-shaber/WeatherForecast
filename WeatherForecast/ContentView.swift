@@ -9,16 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            DayForecast()
+            
+            
+            DayForecast()
+            
+                
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+}
+
+struct DayForecast: View {
+    var body: some View {
+        VStack {
+            
+            Text("Mon")
+            Image(systemName: "sun.max.fill")
+                .foregroundStyle(Color.yellow)
+            Text("High: 70")
+            Text("Low: 50")
+            
+        }
+        .padding()
+    }
 }
